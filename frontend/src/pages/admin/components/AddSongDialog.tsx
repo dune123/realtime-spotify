@@ -202,7 +202,7 @@ const AddSongDialog = () => {
 									</SelectItem>
 								))}
 							</SelectContent>
-						</Select>
+						</Select>		
 					</div>
 				</div>
 

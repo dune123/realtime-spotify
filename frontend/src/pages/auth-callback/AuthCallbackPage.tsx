@@ -17,12 +17,15 @@ const AuthCallbackPage = () => {
 			try {
 				syncAttempted.current = true;
 
-				await axiosInstance.post("/auth/callback", {
+				const response=await axiosInstance.post("/auth/callback", {
 					id: user.id,
 					firstName: user.firstName,
 					lastName: user.lastName,
 					imageUrl: user.imageUrl,
 				});
+
+				localStorage.setItem("token",response.data.token);
+				
 			} catch (error) {
 				console.log("Error in auth callback", error);
 			} finally {

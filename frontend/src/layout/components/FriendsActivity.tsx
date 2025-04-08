@@ -12,7 +12,7 @@ const FriendsActivity = () => {
 	useEffect(() => {
 		if (user) fetchUsers();
 	}, [fetchUsers, user]);
-
+	console.log("users",users);
 	return (
 		<div className='h-full bg-zinc-900 rounded-lg flex flex-col'>
 			<div className='p-4 flex justify-between items-center border-b border-zinc-800'>
@@ -38,8 +38,8 @@ const FriendsActivity = () => {
 								<div className='flex items-start gap-3'>
 									<div className='relative'>
 										<Avatar className='size-10 border border-zinc-800'>
-											<AvatarImage src={user.imageUrl} alt={user.fullName} />
-											<AvatarFallback>{user.fullName[0]}</AvatarFallback>
+											<AvatarImage src={user.imageUrl} alt={user.fullname} />
+											<AvatarFallback>{user.fullname[0]}</AvatarFallback>
 										</Avatar>
 										<div
 											className={`absolute bottom-0 right-0 h-3 w-3 rounded-full border-2 border-zinc-900 
@@ -51,7 +51,7 @@ const FriendsActivity = () => {
 
 									<div className='flex-1 min-w-0'>
 										<div className='flex items-center gap-2'>
-											<span className='font-medium text-sm text-white'>{user.fullName}</span>
+											<span className='font-medium text-sm text-white'>{user.fullname}</span>
 											{isPlaying && <Music className='size-3.5 text-emerald-400 shrink-0' />}
 										</div>
 

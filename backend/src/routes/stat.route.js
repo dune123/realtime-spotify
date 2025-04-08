@@ -4,6 +4,6 @@ import { getStats } from "../controller/stat.controller.js";
 
 const router = Router();
 
-router.get("/", protectRoute, requireAdmin, getStats);
+router.get("/", protectRoute, getStats);
 
 export default router;

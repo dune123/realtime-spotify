@@ -38,6 +38,6 @@ export interface Message {
 export interface User {
 	_id: string;
 	clerkId: string;
-	fullName: string;
+	fullname: string;
 	imageUrl: string;
 }

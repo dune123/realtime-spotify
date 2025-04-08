@@ -110,5 +110,12 @@ export const deleteAlbum = async (req, res, next) => {
 };
 
 export const checkAdmin = async (req, res, next) => {
-	res.status(200).json({ admin: true });
+	try{
+		console.log(req.auth.userId)
+		res.status(200).json({ admin: true });
+	}
+	catch(err){
+		console.log("Error in checking");
+		next(err);
+	}
 };
