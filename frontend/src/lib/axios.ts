@@ -6,9 +6,6 @@ import axios from "axios";
 
 
 export const axiosInstance = axios.create({
-	baseURL:
-	  import.meta.env.MODE === "development"
-		? "http://localhost:5001/api"
-		: "realtime-spotify-production.up.railway.app/api", // replace with actual URL
+	baseURL:"realtime-spotify-production.up.railway.app/api", // replace with actual URL
   });
   
