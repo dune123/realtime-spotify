@@ -13,8 +13,9 @@ const AuthCallbackPage = () => {
 	useEffect(() => {
 		const syncUser = async () => {
 			if (!isLoaded || !user || syncAttempted.current) return;
-
+			console.log("Logging started")
 			try {
+				
 				syncAttempted.current = true;
 
 				const response=await axiosInstance.post("/auth/callback", {
