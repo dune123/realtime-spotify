@@ -17,6 +17,8 @@ export const authCallback = async (req, res, next) => {
 			});
 		}
 
+		console.log(user);
+
 		// Generate JWT Token
 		const token = jwt.sign(
 			{ userId: user.clerkId },
