@@ -23,6 +23,7 @@ const AuthCallbackPage = () => {
 					lastName: user.lastName,
 					imageUrl: user.imageUrl,
 				});
+				console.log(response)
 
 				localStorage.setItem("token",response.data.token);
 				
